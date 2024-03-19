@@ -10,7 +10,21 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			
+			let secondHighest = Number.MIN_VALUE;
+			let firstHighest = Number.MIN_VALUE;
+			for(t of arr){
+				if(arr.length > 1){
+					if(t>firstHighest){
+						firstHighest = t;
+					}
+					else if(t>secondHighest){
+						secondHighest = t;
+					}
+				}
+				else{
+					return "-Infinity";
+				}
+			}
 		}
 
 		function Main() {
@@ -21,7 +35,7 @@
 			}
 			alert(secondHighest(arr));
 		}
-		Main();
+		// Main();
 	</script>
 
     <script type="text/javascript" src="./script.js">
